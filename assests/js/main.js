@@ -1,14 +1,11 @@
-// Scroll to section function
 function scrollToSection(id) {
  document.querySelector(`#${id}`).scrollIntoView({ behavior: "smooth" })
 }
 
-// Scroll to top function
 function scrollToTop() {
  window.scrollTo({ top: 0, behavior: "smooth" })
 }
 
-// Show or hide scroll-to-top button
 window.addEventListener("scroll", function () {
  const scrollBtn = document.getElementById("scrollBtn")
  if (window.scrollY > 300) {
@@ -18,7 +15,6 @@ window.addEventListener("scroll", function () {
  }
 })
 
-// Form submission handling
 document.getElementById("contactForm").addEventListener("submit", function (event) {
  event.preventDefault()
  const button = this.querySelector("button")
@@ -37,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
  const closebtn = document.getElementById("closebtn")
  const sidenav = document.getElementById("mySidenav")
 
- // Function to handle sidenav visibility based on screen width
  function handleSidenavVisibility() {
   if (window.innerWidth <= 1266) {
    // Show open button and hide close button
@@ -55,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
  // Initial check
  handleSidenavVisibility()
 
- // Add event listeners for the open and close buttons
  openbtn.addEventListener("click", function () {
   sidenav.style.display = "block"
   openbtn.style.display = "none"
@@ -68,6 +62,5 @@ document.addEventListener("DOMContentLoaded", function () {
   closebtn.style.display = "none"
  })
 
- // Add event listener to handle screen resizing
  window.addEventListener("resize", handleSidenavVisibility)
 })
